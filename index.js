@@ -22,8 +22,6 @@ const progressContainer = document.querySelector(".progress-container");
 
 const progressBar = document.querySelector(".progress-bar");
 
-//const host = "http://localhost:3000/";
-
 const host = "https://fragrant-back.glitch.me/";
 
 const percentDiv = document.querySelector("#percent")
@@ -98,7 +96,8 @@ const uploadFiles = ()=>{
 
         if(xhr.readyState == XMLHttpRequest.DONE ){
             console.log(xhr.response);
-            onuploadsuccess(JSON.parse(xhr.response));
+            const link = xhr.response;
+            onuploadsuccess(link);
          }
         
     }
@@ -122,7 +121,7 @@ const updateProgress = (e) =>{  //for progress bar
 
 }
 
-const onuploadsuccess = ({file:url })=>{   //destructuring the file to get the link
+const onuploadsuccess = (url)=>{   //destructuring the file to get the link
     console.log(url);
     fileInput.value="";
     //emailForm[2].removeAttribute("disabled")
