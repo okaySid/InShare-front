@@ -22,7 +22,9 @@ const progressContainer = document.querySelector(".progress-container");
 
 const progressBar = document.querySelector(".progress-bar");
 
-const host = "http://localhost:3000/";
+//const host = "http://localhost:3000/";
+
+const host = "https://fragrant-back.glitch.me/";
 
 const percentDiv = document.querySelector("#percent")
 
